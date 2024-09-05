@@ -28,7 +28,6 @@ public class WalkingRobotSubmition {
         return maxEuclideanDistance;
     }
 
-
     public enum Direction {
         NORTH,
         EAST,
@@ -91,7 +90,6 @@ public class WalkingRobotSubmition {
         }
         return false;  // No obstacle found
     }
-
 
     public static void main(String[] args) {
 

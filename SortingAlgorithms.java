@@ -44,9 +44,9 @@ public class SortingAlgorithms {
         System.out.println(Arrays.toString(arr));
         int n = arr.length;
         for (int i = 1; i < n; i++) {
-            int key = arr[i];
+            int key = arr[i]; // Current number to be inserted to its sorted position
             int j = i - 1;
-            while (j >= 0 && arr[j] > key) { // If there are still numbers on the left greater than key, swap them
+            while (j >= 0 && arr[j] > key) { // If there are still numbers on the left greater than key, shift them to the right
                 arr[j + 1] = arr[j];
                 j--;
             }
@@ -108,7 +108,7 @@ public class SortingAlgorithms {
             }
             k++;
         }
-        
+
         // Copy remaining elements of L[] if any
         while (i < n1) {
             arr[k] = L[i];
@@ -124,10 +124,50 @@ public class SortingAlgorithms {
         }
     }
 
+    // Ω(n log n), Θ(n log n), O(n²)
+    // Ideal for large datasets when memory is limited.
+    public static void quickSort(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    // Recursive method to create partitions and quickSort them
+    private static void quickSort(int[] arr, int low, int high) {
+        if (low < high) { // Base case: if the low
+            int pi = partition(arr, low, high); // Partition the array and get the pivot index
+            quickSort(arr, low, pi - 1); // Recursively sort the sub-array before the pivot
+            quickSort(arr, pi + 1, high); // Recursively sort the sub-array after the pivot
+        }
+    }
+
+    private static int partition(int[] arr, int low, int high) {
+        // Choose the pivot (last element of the array in this example)
+        int pivot = arr[high];
+
+        // i is the index of the smaller element
+        int i = low - 1;
+
+        // Loop through the array from low to high-1
+        for (int j = low; j < high; j++) {
+            // If current element is smaller than the pivot
+            if (arr[j] < pivot) {
+                // Increment i and swap arr[i] with arr[j]
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        // Swap the pivot (arr[high]) with the element at i + 1
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        // Return the index where the pivot is placed (partition index)
+        return i + 1;
+    }
 
     public static void main(String[] args) {
         mergeSort(new int[]{2, 5, 3, 10, 8, 99, 1});
     }
-
 
 }

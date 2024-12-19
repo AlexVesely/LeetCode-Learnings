@@ -101,8 +101,7 @@ public class SortingAlgorithms {
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
-            }
-            else {
+            } else {
                 arr[k] = R[j];
                 j++;
             }
@@ -166,8 +165,69 @@ public class SortingAlgorithms {
         return i + 1;
     }
 
+    // Ω(n log n), Θ(n log n), O(n log n)
+    // Use for large datasets, uses binary heaps, guarantees O(n log n) with no extra memory needed
+    public static void heapSort(int[] arr) {
+        int n = arr.length;
+
+        // Build a max heap
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(arr, n, i);
+        }
+
+        // One by one extract elements from the heap
+        for (int i = n - 1; i >= 0; i--) {
+            // Move the current root (max) to the end of the array
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+
+            // Call heapify on the reduced heap
+            heapify(arr, i, 0);
+        }
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    // To maintain the heap property by making sure the subtree rooted at index i is a heap
+    private static void heapify(int[] arr, int n, int i) {
+        int largest = i;         // Initialize largest as root
+        int left = 2 * i + 1;    // Left child
+        int right = 2 * i + 2;   // Right child
+
+        // If left child is larger than root
+        if (left < n && arr[left] > arr[largest]) {
+            largest = left;
+        }
+
+        // If right child is larger than largest so far
+        if (right < n && arr[right] > arr[largest]) {
+            largest = right;
+        }
+
+        // If largest is not root, swap with largest and recursively heapify the affected subtree
+        if (largest != i) {
+            int swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
+
+            // Recursively heapify the affected subtree
+            heapify(arr, n, largest);
+        }
+    }
+
+    // Ω(n), Θ(n log n), O(n log n)
+    // Arrays.sort uses TimSort
+    // TimSort divides the array into smaller chunks that are then sorted and merged back together.
+    // When the array length is < 32 , TimSort usually just uses insertion sort
+    // Use this when you have access to import java.util.Arrays;
+    public static void useBuiltInJavaSort(int[] arr) {
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
     public static void main(String[] args) {
-        mergeSort(new int[]{2, 5, 3, 10, 8, 99, 1});
+        heapSort(new int[]{2, 5, 3, 10, 8, 99, 1});
     }
 
 }

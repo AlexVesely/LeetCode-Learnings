@@ -1,3 +1,8 @@
+//Walking Robot Simulation Description:
+//https://leetcode.com/problems/walking-robot-simulation/description/?envType=daily-question&envId=2024-09-04
+//My Walking Robot Simulation Solution
+//https://leetcode.com/problems/walking-robot-simulation/solutions/5740952/874-walking-robot-simulation/
+
 public class WalkingRobotSubmition {
 
     public static int robotSim(int[] commands, int[][] obstacles) {
@@ -54,7 +59,7 @@ public class WalkingRobotSubmition {
     }
 
     public static int calcEuclideanDistanceSqrd(int xCoordinate, int yCoordinate) {
-        return (xCoordinate * xCoordinate) + (yCoordinate * yCoordinate); // Simplified expression
+        return (xCoordinate * xCoordinate) + (yCoordinate * yCoordinate);
     }
 
     public static void moveForward(Direction currentDirection, int[] coordinates) {

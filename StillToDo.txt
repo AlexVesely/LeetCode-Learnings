@@ -1,0 +1,75 @@
+4. Dynamic Programming (DP)
+DP is one of the most crucial topics for coding assessments.
+
+Memoization (Top-down approach)
+Tabulation (Bottom-up approach)
+Common DP problems:
+    Fibonacci numbers
+    Knapsack problem
+    Longest Common Subsequence
+    Longest Increasing Subsequence
+    Minimum Edit Distance
+    Coin Change
+
+5. Data Structures
+You’ll need to know these well:
+
+Arrays
+    Two-pointer technique
+    Sliding window problems
+Strings
+    String manipulation
+    Substring searches
+    Anagram checking
+    Palindrome problems
+Linked Lists
+    Singly linked lists: Insert, delete, reverse.
+    Doubly linked lists.
+Stacks and Queues
+    Implement with arrays or linked lists.
+    Use for parenthesis matching, expression evaluation, etc.
+Hashing
+    HashMaps and HashSets (constant time lookups)
+    Avoid collisions (important in design questions).
+Trees
+    Binary Trees: Traversals (Inorder, Preorder, Postorder)
+    Binary Search Trees (BST): Insert, delete, search.
+    Lowest Common Ancestor (LCA)
+    Balanced Trees (e.g., AVL, Red-Black Trees)
+Heaps
+    Min-Heap and Max-Heap
+    Priority Queues (PriorityQueue in Java)
+Graphs
+    Representations (Adjacency Matrix/List)
+    Traversal: BFS, DFS
+    Dijkstra’s algorithm (shortest path)
+    Union-Find (for connected components, Kruskal’s algorithm)
+
+6. Greedy Algorithms
+Greedy problems often appear, like:
+Activity Selection
+Huffman Coding
+Minimum Spanning Tree (Kruskal/Prim)
+
+7. Divide and Conquer
+Merge Sort
+Quick Sort
+Binary Search
+
+8. Bit Manipulation
+Check if a number is a power of 2.
+Count the number of 1s in binary representation.
+Find the single non-repeating number in an array.
+
+9. Math Problems
+Prime checking (Sieve of Eratosthenes)
+GCD and LCM
+Modular arithmetic
+Fast exponentiation
+
+10. Practice Problem Themes
+Array manipulation (e.g., "maximum subarray sum").
+String manipulation (e.g., "longest palindrome substring").
+Matrix problems (e.g., rotate a matrix).
+Graph-based puzzles (e.g., "number of islands").
+Combination/permutation generation.

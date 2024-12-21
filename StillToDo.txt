@@ -29,10 +29,10 @@ Stacks and Queues
     Implement with arrays or linked lists.
     Use for parenthesis matching, expression evaluation, etc.
 Hashing
-    HashMaps and HashSets (constant time lookups)
+    HashMaps and HashSets (constant time lookups) !!!
     Avoid collisions (important in design questions).
 Trees
-    Binary Trees: Traversals (Inorder, Preorder, Postorder)
+    Binary Trees: Traversals (Inorder, Preorder, Postorder) !!!
     Binary Search Trees (BST): Insert, delete, search.
     Lowest Common Ancestor (LCA)
     Balanced Trees (e.g., AVL, Red-Black Trees)
@@ -51,10 +51,6 @@ Activity Selection
 Huffman Coding
 Minimum Spanning Tree (Kruskal/Prim)
 
-7. Divide and Conquer
-Merge Sort
-Quick Sort
-Binary Search
 
 8. Bit Manipulation
 Check if a number is a power of 2.

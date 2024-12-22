@@ -43,21 +43,6 @@ public class ArrayLearning {
         return false;
     }
 
-    // Find whether a string is a palindrome or not
-    // String is an array of chars!
-    public static boolean isPalindrome(String s) {
-        int left = 0;
-        int right = s.length() - 1;
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-    }
-
     //ARRAY SLIDING WINDOW PROBLEMS
     // Use when working with sub arrays
 

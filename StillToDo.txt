@@ -31,7 +31,7 @@ Fast exponentiation
 
 10. Practice Problem Themes
 Array manipulation (e.g., "maximum subarray sum").
-String manipulation (e.g., "longest palindrome substring").
+StringLearning manipulation (e.g., "longest palindrome substring").
 Matrix problems (e.g., rotate a matrix).
 Graph-based puzzles (e.g., "number of islands").
 Combination/permutation generation.

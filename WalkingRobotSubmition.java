@@ -96,7 +96,7 @@ public class WalkingRobotSubmition {
         return false;  // No obstacle found
     }
 
-    public static void main(String[] args) {
+    public static void main(StringLearning[] args) {
 
         //Testing code. Euclidean distance should be 65
         int[] commands = {4, -1, 4, -2, 4};

@@ -186,7 +186,6 @@ public class SortingAlgorithms {
             heapify(arr, i, 0);
         }
         System.out.println(Arrays.toString(arr));
-
     }
 
     // To maintain the heap property by making sure the subtree rooted at index i is a heap

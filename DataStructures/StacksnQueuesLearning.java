@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class StacksnQueuesLearning {
     //Stacks and Queues
     //    Implement with arrays or linked lists.

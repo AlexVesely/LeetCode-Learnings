@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class TreesLearning {
     //Trees
     //    Binary Trees: Traversals (Inorder, Preorder, Postorder) !!!

@@ -1,7 +1,4 @@
-//Walking Robot Simulation Description:
-//https://leetcode.com/problems/walking-robot-simulation/description/?envType=daily-question&envId=2024-09-04
-//My Walking Robot Simulation Solution
-//https://leetcode.com/problems/walking-robot-simulation/solutions/5740952/874-walking-robot-simulation/
+package LeetCodeProblems.WalkingRobotSimulation_874;
 
 public class WalkingRobotSubmition {
 
@@ -96,7 +93,7 @@ public class WalkingRobotSubmition {
         return false;  // No obstacle found
     }
 
-    public static void main(StringLearning[] args) {
+    public static void main(String[] args) {
 
         //Testing code. Euclidean distance should be 65
         int[] commands = {4, -1, 4, -2, 4};

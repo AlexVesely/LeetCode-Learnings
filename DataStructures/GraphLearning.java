@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class GraphLearning {
     //Graphs
     //    Representations (Adjacency Matrix/List)

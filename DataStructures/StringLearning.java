@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class StringLearning {
     //Strings
     //    String manipulation

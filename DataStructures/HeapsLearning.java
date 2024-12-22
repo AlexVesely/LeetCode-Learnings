@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class HeapsLearning {
     //Heaps
     //    Min-Heap and Max-Heap

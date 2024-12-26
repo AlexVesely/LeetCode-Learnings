@@ -41,7 +41,7 @@ public class SortingAlgorithms {
     }
 
     // Ω(n), Θ(n²), O(n²)
-    // Use for small arrays or nearly sorted arrays
+    // Use for small arrays or nearly sorted arrays, could also use 2 arrays to avoid temp 'key'
     public static void insertionSort(int[] arr) {
         System.out.println(Arrays.toString(arr));
         int n = arr.length;

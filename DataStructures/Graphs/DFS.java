@@ -2,6 +2,7 @@ package DataStructures.Graphs;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class DFS {
     private final boolean[] visited;
@@ -55,6 +56,56 @@ public class DFS {
         return false;
     }
 
+    public static List<Integer> topologicalSort(AdjacencyList graph) {
+        int numVertices = graph.getAdjList().size();
+        boolean[] visited = new boolean[numVertices];
+        Stack<Integer> stack = new Stack<>();
+
+        // Call DFS on every unvisited node
+        for (int node = 0; node < numVertices; node++) {
+            if (!visited[node]) {
+                topologicalSortUtil(node, graph.getAdjList(), visited, stack);
+            }
+        }
+
+        // Convert stack to list for easier handling and return
+        List<Integer> topOrder = new ArrayList<>();
+        while (!stack.isEmpty()) {
+            topOrder.add(stack.pop());
+        }
+
+        return topOrder;
+    }
+
+    // Helper method for DFS in topological sorting
+    private static void topologicalSortUtil(
+            int node, List<ArrayList<Integer>> adjList, boolean[] visited, Stack<Integer> stack) {
+        visited[node] = true;
+
+        for (int neighbor : adjList.get(node)) {
+            if (!visited[neighbor]) {
+                topologicalSortUtil(neighbor, adjList, visited, stack);
+            }
+        }
+
+        // Push the node to the stack after visiting all its descendants
+        stack.push(node);
+    }
+
+    // Method that checks if a cycle exists, if not performs topological sorting
+    public static void Sort(AdjacencyList graph) {
+        System.out.println("Adjacency List:");
+        graph.printList();
+
+        if (isAcyclic(graph)) {
+            List<Integer> topOrder = topologicalSort(graph);
+            System.out.println("Topological Sort:");
+            System.out.println(topOrder);
+        } else {
+            System.out.println("The graph contains a cycle, so topological sort is not possible.");
+        }
+    }
+
     public static void main(String[] args) {
         AdjacencyList graph = new AdjacencyList(6, true);
         graph.addEdge(0, 1);
@@ -63,16 +114,17 @@ public class DFS {
         graph.addEdge(2, 3);
         graph.addEdge(3, 4);
         graph.addEdge(4, 5);
-        graph.addEdge(5, 1);
 
         System.out.println("Adjacency List:");
         graph.printList();
 
-        System.out.println("\nDFS Traversal starting from node 0:");
+        System.out.println("DFS Traversal starting from node 0:");
         DFS dfs = new DFS(6);
         dfs.dfs(0, graph.getAdjList());
 
-        System.out.println("\nIs the graph acyclic?");
+        System.out.println("Is the graph acyclic?");
         System.out.println(isAcyclic(graph));
+
+        Sort(graph);
     }
 }

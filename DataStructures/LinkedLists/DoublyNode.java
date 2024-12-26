@@ -1,4 +1,4 @@
-package DataStructures.LinkedList;
+package DataStructures.LinkedLists;
 
 public class DoublyNode {
     private int data;

@@ -1,4 +1,4 @@
-package DataStructures.Graph;
+package DataStructures.Graphs;
 
 public class AdjacencyMatrix {
     private final int[][] matrix;

@@ -1,4 +1,4 @@
-package DataStructures.Graph;
+package DataStructures.Graphs;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,13 @@ public class AdjacencyList {
         }
     }
 
+    public ArrayList<ArrayList<Integer>> getAdjList() {
+        return adjList;
+    }
 
+    public boolean isDirected() {
+        return isDirected;
+    }
 
     public static void main(String[] args) {
         AdjacencyList list = new AdjacencyList(4, true);

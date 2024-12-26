@@ -1,4 +1,4 @@
-package DataStructures.LinkedList;
+package DataStructures.LinkedLists;
 
 public class DoublyLinkedList {
     DoublyNode head;

@@ -19,7 +19,7 @@ public class HashSetNHashMapLearning {
         map.put("banana", 22);
         map.put("cherry", 6);
 
-        System.out.println("Banana count: " + map.get("banana")); // Output: 5
+        System.out.println("Banana count: " + map.get("banana")); // Output: 22
 
         System.out.println("Contains apple? " + map.containsKey("apple")); // Output: true
 

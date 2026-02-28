@@ -39,6 +39,7 @@ public class HashSetNHashMapLearning {
 
         set.add(10);
         set.add(20);
+        set.add(20);
         set.add(30);
 
         System.out.println("Contains 20? " + set.contains(20)); // Output: true

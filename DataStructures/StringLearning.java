@@ -3,6 +3,28 @@ package DataStructures;
 import java.util.Arrays;
 
 public class StringLearning {
+
+    public static void basicStringBuilderUsage() {
+        StringBuilder sb = new StringBuilder(); // Using StringBuilder instead of String as SB is mutable
+        sb.append("Hello");      // add string
+        sb.append(" World");     // add another
+        System.out.println(sb.toString());
+
+        sb.insert(6, "Java ");   // insert at index 6, which is here "Hello_World"
+        System.out.println(sb.toString()); // "Hello Java World"
+
+        sb.delete(6, 11);        // delete characters from index 6 to 10
+        System.out.println(sb.toString()); // "Hello World"
+
+        sb.reverse();             // reverse the string
+        System.out.println(sb.toString()); // "dlroW olleH"
+
+        sb.reverse();
+
+        sb.setCharAt(0, 'h');     // change char at index 0
+        System.out.println(sb.toString()); // "hello World"
+    }
+
     // Manipulate a String by reversing it
     public static String reverseString(String str) {
         char[] chars = str.toCharArray();
@@ -87,5 +109,6 @@ public class StringLearning {
 
     public static void main(String[] args) {
         System.out.println(reverseString("Hablop"));
+        basicStringBuilderUsage();
     }
 }

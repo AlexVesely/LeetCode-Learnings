@@ -29,6 +29,10 @@ public class HashSetNHashMapLearning {
         for (String key : map.keySet()) {
             System.out.println(key + ": " + map.get(key));
         }
+
+        for (int value : map.values()) {
+            System.out.println("Value Num " + value + ": " + value);
+        }
     }
 
     // A Hash Set is like a HashMap but only stores unique elements

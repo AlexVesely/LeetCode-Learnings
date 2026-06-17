@@ -1,4 +1,5 @@
 package DataStructures;
+import java.util.Arrays;
 
 public class ArrayLearning {
 
@@ -66,8 +67,28 @@ public class ArrayLearning {
         return maxSum;
     }
 
+    public static void arraysClassLearning() {
+        int[] a = {1,2,3,4};
+        System.out.println(Arrays.toString(a));
+        int[] b = Arrays.copyOf(a,4);
+        System.out.println(Arrays.toString(b));
+        int[] c = Arrays.copyOf(a, 6); // Will add zeroes to the extra spaces
+        System.out.println(Arrays.toString(c));
+        int[] d = Arrays.copyOf(a, 2); // Will remove the last 2 indexes
+        System.out.println(Arrays.toString(d));
+        int[] e = Arrays.copyOfRange(a,1,3);
+        System.out.println(Arrays.toString(e));
+
+        // USE Arrays.equals(a1,a2) to compare that 2 arrays with the same contents are equal
+        // USE Arrays.deepEquals(a1,a2) to compare the 2 2D,3D,4D... arrays with the contents are equal
+
+        int[] all2s = new int[10];
+        Arrays.fill(all2s, 2);
+        System.out.println(Arrays.toString(all2s));
+    }
+
     public static void main(String[] args) {
-        System.out.println(maxSumSubarray(new int[]{3,2,1,10,2,4,5,1,1,4,6,7,8},3));
+        arraysClassLearning();
     }
 
 }

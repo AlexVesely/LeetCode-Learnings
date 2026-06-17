@@ -15,8 +15,8 @@ public class LinkedListLearning {
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>();
 
-        list.addFirst(3);
         list.addFirst(2);
+        list.addFirst(10);
         list.addLast(5);
         list.addLast(7);
 

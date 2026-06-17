@@ -17,7 +17,7 @@ public class HashSetNHashMapLearning {
         // Insert key-value pairs
         map.put("apple", 1);
         map.put("banana", 22);
-        map.put("banana", 6); // overwrites value previously retreived from this key
+        map.put("banana", 6); // overwrites value previously retrieved from this key
         map.put("cherry", 8);
 
         System.out.println("Banana count: " + map.get("banana")); // Output: 22

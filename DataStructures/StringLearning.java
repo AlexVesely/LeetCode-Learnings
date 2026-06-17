@@ -4,8 +4,20 @@ import java.util.Arrays;
 
 public class StringLearning {
 
+    // Strings are immutable
+    // StringBuilder is mutable
+
+    // String s = "Hello"
+    // String s = s + " World"
+    // The original "Hello" will stay in memory until the garbage collector finds it!
+    // Imagine doing that 1000 times!
+    // With a StringBuilder the same object's memory is being altered
+
+    // Use Strings when: Text is not changing, creating keys, simple operations
+    // Use SB when: Looping and altering the same text, reversing text, passing and constructing text
+
     public static void basicStringBuilderUsage() {
-        StringBuilder sb = new StringBuilder(); // Using StringBuilder instead of String as SB is mutable
+        StringBuilder sb = new StringBuilder();
         sb.append("Hello");      // add string
         sb.append(" World");     // add another
         System.out.println(sb.toString());
